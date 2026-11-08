@@ -24,7 +24,7 @@ Add And Take Stock
 
 *** Keywords ***
 Start Warehouse
-    Start Process    uv    run    --project    ${EXECDIR}    python    ${EXECDIR}/src/web.py    stdout=warehouse.log    stderr=warehouse.log
+    Start Process    uv    run    --project    ${EXECDIR}    python    ${EXECDIR}/src/web.py
     Wait Until Keyword Succeeds    10x    1s    GET    ${BASE_URL}/
     Create Session    warehouse    ${BASE_URL}
 
